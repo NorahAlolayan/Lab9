@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab8 Task7</title>
+</head>
+<body>
+
+<h2>Number of Students in Each City</h2>
+
+{% for item in data %}
+    <p>
+        City: {{ item.city }} <br>
+        Number of Students: {{ item.num_students }}
+    </p>
+    <hr>
+{% endfor %}
+
+</body>
+</html>

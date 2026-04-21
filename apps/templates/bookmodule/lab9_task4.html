@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 Task 4</title>
+</head>
+<body>
+    <h1>Average, Min, and Max Book Price for Each Publisher</h1>
+
+    <table border="1">
+        <tr>
+            <th>Publisher Name</th>
+            <th>Location</th>
+            <th>Average Price</th>
+            <th>Min Price</th>
+            <th>Max Price</th>
+        </tr>
+
+        {% for publisher in publishers %}
+        <tr>
+            <td>{{ publisher.name }}</td>
+            <td>{{ publisher.location }}</td>
+            <td>{{ publisher.avg_price }}</td>
+            <td>{{ publisher.min_price }}</td>
+            <td>{{ publisher.max_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 9 Task 5</title>
+</head>
+<body>
+    <h1>Publishers with Highly Rated Books</h1>
+
+    <table border="1">
+        <tr>
+            <th>Publisher Name</th>
+            <th>Location</th>
+            <th>Highly Rated Books Count</th>
+        </tr>
+
+        {% for publisher in publishers %}
+        <tr>
+            <td>{{ publisher.name }}</td>
+            <td>{{ publisher.location }}</td>
+            <td>{{ publisher.high_rated_books }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

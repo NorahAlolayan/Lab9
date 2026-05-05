@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books List (Part 2)</title>
+</head>
+<body>
+
+<h1>Books List (Part 2)</h1>
+
+<a href="/books/lab9_part2/addbook">Add New Book</a>
+
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.price }}</td>
+        <td>{{ book.quantity }}</td>
+        <td>
+            <a href="/books/lab9_part2/editbook/{{ book.id }}">Edit</a>
+            |
+            <a href="/books/lab9_part2/deletebook/{{ book.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
